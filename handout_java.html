@@ -38,7 +38,7 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-                                        <h2>Assignment 1: Build Your Virtual City: C++ Version</h2>
+                                        <h2>Assignment 1: Build Your Virtual City: Java Version</h2>
 										<h3><a href = "https://www.ctralie.com">Chris Tralie</a></h3>
 										<HR>
 										<h3>Table of Contents</h3>
@@ -85,13 +85,7 @@
                                         <h2><a name = "overview">Overview / Logistics</a></h2>
 
 										<p>
-											Watch the video below for a primer on this assignment:
-										</p>
-
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/lhvl-rUBLO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-										<p>
-                                            The purpose of this assignment is to enable you to brush up on your knowledge of methods and how they fit together, and to practice them in a new language: C++.  It is also an opportunity to practice reading documentation for existing methods to learn how to use them, which is something you will often do in practice, since we rarely re-invent the wheel and often use code that other people write (often called a <a href = "https://en.wikipedia.org/wiki/Library_(computing)">library</a>).  
+                                            The purpose of this assignment is to enable you to brush up on your knowledge of methods and how they fit together.  It is also an opportunity to practice reading documentation for existing methods to learn how to use them, which is something you will often do in practice, since we rarely re-invent the wheel and often use code that other people write (often called a <a href = "https://en.wikipedia.org/wiki/Library_(computing)">library</a>).  
 										</p>
 
 										<p>
@@ -115,9 +109,6 @@
                                                 <li>Use methods together in concert to accomplish a task</li>
                                                 <li>Write a complete program with very little code in the <code>main</code> function</li>
                                                 <li>Work with 3D coordinates programmatically </li>
-												<li>
-													Use C++ makefiles and the terminal to build and run programs
-												</li>
                                             </ul>
                                         </p>
 
@@ -166,21 +157,21 @@
 									<h2><a name = "shapes3d">Background: 3D Scenes And Shapes</a></h2>
 
 									<p>
-										In this assignment, you will be creating 3D worlds, also known as "scenes," that can be loaded into the browser.  Your C++ program will write HTML code that you then launch.  I have provided a series of high level functions that you can use to draw shapes, and which will automatically convert to code on the backend that uses the <a href = "https://threejs.org/">three.js library</a>.
+										In this assignment, you will be creating 3D worlds, also known as "scenes," that can be loaded into the browser.  Your Java program will write HTML code that you then launch.  I have provided a series of high level functions that you can use to draw shapes, and which will automatically convert to code on the backend that uses the <a href = "https://threejs.org/">three.js library</a>.
 									</p>
 
 									<p>
-										The full documentation for drawing shapes can be found <a href = "docs/classScene3D.html">at this link</a>. Below are a few examples with links to the respective documentation.  There are two versions of most methods: one for drawing an "axis-aligned" shape, and one for drawing a rotated version.  You'll mostly be using the axis-aligned versions in the tasks.
+										The full documentation for drawing shapes can be found <a href = "javadocs/html/classScene3D.html">at this link</a>. Below are a few examples with links to the respective documentation.  There are two versions of most methods: one for drawing an "axis-aligned" shape, and one for drawing a rotated version.  You'll mostly be using the axis-aligned versions in the tasks.
 									</p>
 
 									<h3><a name = "box">3D Box</a></h3>
 
 									<ul>
 										<li>
-											<a href = "docs/classScene3D.html#ae8eac9d945e2774945d5be751bd8095f">Click here</a> to view the documentation for drawing an axis-aligned box.
+											<a href = "javadocs/html/classScene3D.html#abee3c4e34328838d987eebaa8ad249fc">Click here</a> to view the documentation for drawing an axis-aligned box.
 										</li>
 										<li>
-											<a href = "docs/classScene3D.html#aad31694a1aa102fbdaba7bf882ddaa74">Click here</a> to view the documentation for drawing a rotated box.
+											<a href = "javadocs/html/classScene3D.html#ad0d876a1b2dfc166cf8e23ad412f5e73">Click here</a> to view the documentation for drawing a rotated box.
 										</li>
 									</ul>
 
@@ -199,10 +190,10 @@
 
 									<ul>
 										<li>
-											<a href = "docs/classScene3D.html#a689f70b88a16abf9779db98bb49e0e4b">Click here</a> to view the documentation for drawing an axis-aligned cylinder.
+											<a href = "javadocs/html/classScene3D.html#a519adbcd35f760dea27ef9c27ff0574a">Click here</a> to view the documentation for drawing an axis-aligned cylinder.
 										</li>
 										<li>
-											<a href = "docs/classScene3D.html#a35de8e274def891b4b7f28b67409d039">Click here</a> to view the documentation for drawing a rotated cylinder.
+											<a href = "javadocs/html/classScene3D.html#a9b79832e3ccb64473d9cf0cf3046fbdf">Click here</a> to view the documentation for drawing a rotated cylinder.
 										</li>
 									</ul>
 
@@ -222,10 +213,10 @@
 
 									<ul>
 										<li>
-											<a href = "docs/classScene3D.html#ac818fe40e518b1b97b4ec4650fbe1245">Click here</a> to view the documentation for drawing an axis-aligned cone.
+											<a href = "javadocs/html/classScene3D.html#a369c0de16fde532dcfcc13ae8c6da0a4">Click here</a> to view the documentation for drawing an axis-aligned cone.
 										</li>
 										<li>
-											<a href = "docs/classScene3D.html#afd74c5df64a02fdaffb033aaaa253d2e">Click here</a> to view the documentation for drawing a rotated cone.
+											<a href = "javadocs/html/classScene3D.html#af367df80e9baa35a168695fef3e61dd3">Click here</a> to view the documentation for drawing a rotated cone.
 										</li>
 									</ul>
 
@@ -245,7 +236,7 @@
 
 									<ul>
 										<li>
-											<a href = "docs/classScene3D.html#a70a0689eb551665a49eefcb0559aeea2">Click here</a> to view the documentation for drawing a sphere.
+											<a href = "javadocs/html/classScene3D.html#ac7a72042a8babdd0b63fc9d759efd11f">Click here</a> to view the documentation for drawing a sphere.
 										</li>
 									</ul>
 
@@ -268,10 +259,10 @@
 
 									<ul>
 										<li>
-											<a href = "docs/classScene3D.html#a361eb8568a55b6efaa185195efd07910">Click here</a> to view the documentation for drawing an axis-aligned ellipsoid.
+											<a href = "javadocs/html/classScene3D.html#ad76a907c36b2b7e6bab76a0ea4cbb0a0">Click here</a> to view the documentation for drawing an axis-aligned ellipsoid.
 										</li>
 										<li>
-											<a href = "docs/classScene3D.html#aab0d18c5203abee9c2773a6a60d43277">Click here</a> to view the documentation for drawing a rotated ellipsoid.
+											<a href = "javadocs/html/classScene3D.html#af1e91e5b49ad953d19d8c2a0bef1a3ae">Click here</a> to view the documentation for drawing a rotated ellipsoid.
 										</li>
 									</ul>
 
@@ -286,7 +277,7 @@
 
 									<h3><a name = "meshes">Meshes</a></h3>
 									<p>
-										For the <a href = "#artcontest">art contest</a>, you have a variety of <a href = "https://en.wikipedia.org/wiki/Triangle_mesh">triangle meshes</a> available, including 100 shapes from the <a href = "https://shape.cs.princeton.edu/benchmark/">Princeton shape benchmark</a> and a few others, which can all be found in the <code><a href = "HW1_VirtualCities/meshes">meshes</a></code> folder of your assignment.  <a href = "docs/classScene3D.html#a7a876ee1d95ea42b324b9674558d4415">Click here</a> to view the documentation for the <code>addMesh</code> method.
+										For the <a href = "#artcontest">art contest</a>, you have a variety of <a href = "https://en.wikipedia.org/wiki/Triangle_mesh">triangle meshes</a> available, including 100 shapes from the <a href = "https://shape.cs.princeton.edu/benchmark/">Princeton shape benchmark</a> and a few others, which can all be found in the <code><a href = "HW1_VirtualCities/meshes">meshes</a></code> folder of your assignment.  <a href = "javadocs/html/classScene3D.html#af44ffeee219620b3a7649cf60e9ccb50">Click here</a> to view the documentation for the <code>addMesh</code> method.
 
 									<p>
 										Here's an example with three of the meshes.  You may need to scale them to get them to the size you want, since they have all been "normalized" to the same scale.
@@ -310,7 +301,7 @@
 									</p>
 
 									<p>
-										<a href = "docs/classScene3D.html#ab36e8895f015238a2d91429a638679fa">Click here</a> to see documentation on this method.
+										<a href = "javadocs/html/classScene3D.html#af5aa127152c48f8884a443777bc13b59">Click here</a> to see documentation on this method.
 									</p>
 
 									<p>
@@ -356,7 +347,7 @@
 										* @param g Green component of the sign
 										* @param b Blue component of the sign
 										*/
-										void drawSign(Scene3D& scene, double cx, double cz, 
+										public static void drawSign(Scene3D scene, double cx, double cz, 
 																	bool isEastWest, double r, double g, double b) {
 											// Draw the main pole
 											scene.addCylinder(cx, 1, cz, 0.05, 2, 127, 127, 127, 1, 0); 
@@ -389,14 +380,12 @@
 									]]></script>
 
 									<img src = "Signs.png">
-									<p>
-										<b>NOTE:</b> The syntax <code>void drawSign(Scene3D& scene ...)</code> may seem a bit strange at this point in the course.  We will talk about this more later, but <code>scene</code> is an object of type <code>Scene3D</code>, and the <code>Scene3D&</code> prefix is indicating that we want to pass <code>scene</code> <b>by reference</b>.  This means that we're not creating a copy of the scene when we call the method, but we're actually referring to the same scene across methods.  Then, we can call a method within the object with <code>scene.method()</code>.  Don't worry if this doesn't totally make sense yet...just follow <code>drawSign</code> as an example when you're doing other methods, and you'll be fine.
-									</p>
+									
 									<p></p>
 									<h3><a name = "running">Running The Engine And Viewing The Scene</a></h3>
 
 									<p>
-										To run the 3D engine provided with this assignment and interactively view your scene, you need to save it to an HTML file.  For example, the following is in <code>simplescene.cpp</code> after all of the drawing commands
+										To run the 3D engine provided with this assignment and interactively view your scene, you need to save it to an HTML file.  For example, the following is in <code>simplescene.java</code> after all of the drawing commands
 									</p>
 
 									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
@@ -404,25 +393,25 @@
 									]]></script>
 
 									<p>
-										To generate this, you have to build your file and run it.  First, open the folder containing your project in VSCode (it's important that you open the folder specifically for the <a href = "Software/index.html#liveserver">live server</a>). Then, compile your c++ program and run it.  In the image below, I'm showing doing this with a <a href = "#makefile">makefile</a>.  Once you run it, it will generate a file with whatever name you chose in <code>saveScene</code>.  Right click on this file in VSCode and click "Open with <a href = "Software/index.html#liveserver">Live Server</a>".  This will pop up with a window in your browser where you can interactively view the scene.  If you keep this window open and regenerate the scene, it will automatically refresh!
+										To generate this, you have to build your file and run it.  First, open the folder containing your project in VSCode (it's important that you open the folder specifically for the <a href = "Software/index.html#liveserver">live server</a>). Then, compile your Java program and run it.  Once you run it, it will generate a file with whatever name you chose in <code>saveScene</code>.  Right click on this file in VSCode and click "Open with <a href = "Software/index.html#liveserver">Live Server</a>".  This will pop up with a window in your browser where you can interactively view the scene.  If you keep this window open and regenerate the scene, it will automatically refresh!
 									</p>
 
 									
 
-									<img src = "OpenScene.gif" width="80%">
+									<img src = "OpenSceneJava.gif" width="80%">
 									
 
 
 									<p><b>NOTE:</b> If you are having trouble with this, you can simply upload the HTML file that your code generates to the web page at <a href = "https://niftyvirtualcities.github.io/VirtualCities/HW1_VirtualCities/viewer.html">this link</a>.</p>
 
-									<h3><a name = "makefile">Setup / Makefile (3 Points)</a></h3>
+									<h3><a name = "makefile">Setup File (3 Points)</a></h3>
 									<p>
-										First, to get started, you should setup a file called <code>myscene.cpp</code> that you will compile to generate your scene.  <b>You should keep the main method very small, as per the style guide</b>.  As an example, you can refer to the file <code><a href = "HW1_VirtualCities/simplescene.cpp">simplescene.cpp</a></code>, which sets up the small example scene above with two signs and Homer Simpson.  Finally, to make your job quicker as you go along, you should add an appropriate entry to your makefile.
+										First, to get started, you should setup a file called <code>myscene.java</code> that you will compile to generate your scene.  <b>You should keep the main method very small, as per the style guide</b>.  As an example, you can refer to the file <code><a href = "simplescene.java">simplescene.java</a></code>, which sets up the small example scene above with two signs and Homer Simpson.
 									</p>
 
 									<h3><a name = "tree">Tree (5 Points)</a></h3>
 									<p>
-										Create a method that draws a simple "lollipop" tree, which consists of a brown (<font color="brown">rgb 102, 51, 0</font>) trunk of a specified height, and a green (<font color = "green">rgb 0, 255, 0</font>) ellipsoid for the "leaves."  The height should be a parameter to the method so you can draw trees of varying heights.
+										Create a <code>public static void</code> method that draws a simple "lollipop" tree, which consists of a brown (<font color="brown">rgb 102, 51, 0</font>) trunk of a specified height, and a green (<font color = "green">rgb 0, 255, 0</font>) ellipsoid for the "leaves."  The height should be a parameter to the method so you can draw trees of varying heights.
 									</p>
 
 									<p>
@@ -487,7 +476,7 @@
 
 									<h3><a name = "artcontest">Mandatory Art Contest (3 Points)</a></h3>
 									<p>
-										Create a c++ file <code>artcontest.cpp</code> and a corresponding makefile entry to create an executable called <code>artcontest</code>, which outputs a file <code>artcontest.html</code> with any virtual world you want.  Unleash your creativity!  Your scene does not have to be a city.  Indicate in your submission a title for your scene and what name or pseudonym you would like to use for the contest.  <i>The winner will receive 5 points of extra credit.</i>
+										Create a Java file <code>artcontest.java</code>, which outputs a file <code>artcontest.html</code> with any virtual world you want.  Unleash your creativity!  Your scene does not have to be a city.  Indicate in your submission a title for your scene and what name or pseudonym you would like to use for the contest.  <i>The winner will receive 5 points of extra credit.</i>
 									</p>
 
 									<p>

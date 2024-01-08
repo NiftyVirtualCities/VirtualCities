@@ -27,7 +27,10 @@
                 <h3><a href = "https://github.com/NiftyVirtualCities/HW1_VirtualCities/archive/refs/heads/main.zip">Starter Code</a> (C++ and Java Versions Together, Both with three.js)</h3>
             </li>
             <li>
-                <h3><a href = "handout.html">Handout with Assignment Description</a></h3>
+                <h3><a href = "handout.html">Handout with Assignment Description: C++ Version</a></h3>
+            </li>
+            <li>
+                <h3><a href = "handout_java.html">Handout with Assignment Description: Java Version</a></h3>
             </li>
             <li>
                 <h3>Art Contests</h3>
@@ -68,7 +71,7 @@
         </p>
 
         <p>
-            Students are graded on the accuracy of the city shapes, as well as style and quality of their method documentation.  Students are expected to properly modularize methods in a hierarchy with individual methods for each city object, a method for a city block, and a separate method for the entire city.  If students set their code up correctly, they only have to pass an x and z offset parameter to the city block method to move all of the objects in the block together.  In this way, the assignment served as a gentle introduction to "scene graphs" and relative coordinate systems in computer graphics, couched in the framework of method design, modularity, and re-usability (an ulterior motive is to get intro students excited enough to continue on in the curriculum to reach our capstone computer graphics course).
+            Students are graded on the accuracy of the city shapes, as well as style and quality of their method documentation.  Students are expected to properly modularize methods in a hierarchy with individual methods for each city object, a method for a city block, and a separate method for the entire city.  If students set their code up correctly, they only have to pass an x and z offset parameter to the city block method to move all of the objects in the block together.  In this way, the assignment serves as a gentle introduction to "scene graphs" and relative coordinate systems in computer graphics, couched in the framework of method design, modularity, and re-usability (an ulterior motive is to get intro students excited enough to continue on in the curriculum to reach our capstone computer graphics course).
         </p>
 
         <h4>Art Contests</h4>
@@ -150,25 +153,18 @@
             <tr>
                 <td>Dependencies / Variants</td>
                 <td>
-                    I've provided two different versions of the assignment.  
-
-                    <p>
-                        The first is in Java/Netbeans and uses my original ggslac graphics engine, which works, but which is a bit slow for larger scenes.  <a href = "VirtualCities_Java.zip">Click here</a> to download this version.
+                    I've provided two different versions of the assignment: one in C++ and one in Java.  The C++ version requires standard GNU tools such as C++ and make, but there are no other dependencies.  To make things easier for students, I had them use Visual Studio Code as an IDE, and I had them install a plugin for a local web server that automatically refreshed every time their programs overwrote their HTML files.  This improved earlier versions of the assignment where students had to manually import JSON files into the scene viewer web page every time their code regenerated them.  <a href = "Software/index.html">Click here</a> for more details on the VSCode and live server setup.
                     </p>
 
                     <p>
-                        The second is a C++ version that outputs HTML files which use <a href = "https://threejs.org/">three.js</a>.  <a href = "VirtualCities_CPP.zip">Click here</a> to download this version.  This version requires standard GNU tools such as C++ and make, but there are no other dependencies.  To make things easier for students, I had them use Visual Studio Code as an IDE, and I had them install a plugin for a local web server that automatically refreshed every time their programs overwrote their HTML files.  This improved earlier versions of the assignment where students had to manually import JSON files into the scene viewer web page every time their code regenerated them.  <a href = "Software/index.html">Click here</a> for more details on the VSCode and live server setup.
-                    </p>
-
-                    <p>
-                        In both cases, <b>the web pages should be run in a local web server</b> to display properly and to avoid cross-origin requests when loading meshes.  The easiest way to do this, by far, is to use the <a href = "Software/index.html#liveserver">sive server</a> plugin in VSCode, as this will automatically refresh the page every time students run their code.  
+                        In both cases, <b>the web pages should be run in a local web server</b> to display properly and to avoid cross-origin requests when loading meshes.  The easiest way to do this, by far, is to use the <a href = "Software/index.html#liveserver">live server</a> plugin in VSCode, as this will automatically refresh the page every time students run their code.  
                     </p>
                     <p>
                         Alternatively, one can run a local web server in this directory with, for instance <code>python -m http.server</code>
                     </p>
                     
                     <p>
-                        <b>NOTE: </b> In response to reviewer comments about friction from the dependency on VSCode or a local web server, I'm hosting a page at <a href = "HW1_VirtualCities/viewer.html">this link</a> where one can upload their HTML file and the scene will be displayed in that page.
+                        <b>NOTE: </b> In response to reviewer comments about friction from the dependency on VSCode or a local web server, I'm hosting a page at <a href = "HW1_VirtualCities/viewer.html">this link</a> as a backup option where one can upload their HTML file and the scene will be displayed in that page.
                     </p>
 
                     <!--
