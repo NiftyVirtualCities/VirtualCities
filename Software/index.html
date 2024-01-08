@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!-- Header !-->
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+        <style>
+        .image_off, #home:hover .image_on{
+           display:none
+        }
+        .image_on, #home:hover .image_off{
+           display:block
+        }
+        </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+<!-- End Header !-->
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Software Environment</h1>
+									</header>
+									
+
+									<h2><a name = "vscode">Visual Studio Code</a></h2>
+									<p>
+										In this class, we will be using <b>Microsoft Visual Studio Code(VSCode)</b>  to write code and to interact with a remote computer to code.  VSCode has nice plugins for syntax highlighting, code completion, and built in documentation for C and C++.  Visit <a href = "https://code.visualstudio.com/Download">this link</a> to download VSCode for your appropriate operating system.  Most Windows and Linux users will want the <b>64-bit</b> download.  Please post on Discord if you are having any issues installing VSCode.
+									</p>
+
+									<HR>
+									<h2><a name = "remote">Setting Up Remote Computing with VSCode</a></h2>
+
+									
+
+									<p>
+										<b>Motivation:</b> So that everyone in the class has the same set of software tools, students will log into a remote computer using a service called <a href = "https://www.ssh.com/academy/ssh/protocol">secure shell (ssh)</a>.  Luckily, VSCode has a very nice add-on that makes it easy to connect and code on remote computers.  You can read more information about it at <a href = "https://code.visualstudio.com/docs/remote/ssh">this link</a>, but I will summarize the important information below
+									</p>
+
+
+									<h3>Step 1: Install Remote Development Extension Pack</h3>
+
+									<p>
+										First, search for Microsoft's <code>Remote Development Extension Pack</code> in the extensions store:
+									</p>
+
+									<img src = "remoteDevel.png">
+
+									<h3>Step 2: Connect To Server</h3>
+									<p>
+										Type either <code>F1</code> or <code>Ctrl+Shift+p</code> to open up the "command palette" input for vscode, and search for <code>Remote-SSH: Add New SSH Host...</code> and press ENTER
+									</p>
+
+									<img src = "addHost.png">
+
+									<p>
+										Then, enter <code>username@computer</code>, where <code>username</code> is your username on nimbus and type ENTER:
+									</p>
+									<img src = "username.png">
+
+									<p>
+										If the following pops up, simply select the default option
+									</p>
+
+									<img src = "sshconfig.png">
+
+									<p>
+										At this point, the host has been added to your configuration, so you can connect to it by going back to the command palette, searching for <code>Remote-SSH: Connect to Host...</code> and select
+									</p>
+
+									<img src = "remoteConnect.png">
+
+									<p>
+										then select nimbus and enter your password
+									</p>
+
+									<img src = "selectNimbus.png">
+
+									<p>
+										If at any point it asks what the platform is, select <code>Linux.</code>
+									</p>
+
+									<p>
+										At this point, a new VSCode window should pop up.  Click on the file explorer to open up the folders on your account on that computer:
+									</p>
+
+									<img src = "explorer.png">
+
+									<p>
+										Select any folder to view the contents in it:
+									</p>
+
+									<img src = "openFolder.png">
+
+									<p>
+										Now you can open any file there and code!
+									</p>
+
+									<h3><a name = "terminal">VSCode Command Line</a></h3>
+									<p>
+										A huge part of CS 174 is learning how to manage code using <a href = "https://www.learnenough.com/command-line-tutorial/">the command line</a>, or "terminal" for short.  This is an essential skill for any programmer, particularly those working on any modern team in software engineering or cloud computing.  There are myriad ways to launch the terminal, and it even has its own dedicated menu in VSCode.  Once you've logged in using the directions above, you can launch a terminal at the bottom of your code environment, and you should see something like this:
+									</p>
+
+									<img src = "terminal.png">
+
+
+									<h3><a name = "liveserver">Live Server Plugin</a></h3>
+									<p>
+										One more extension you'll need to install will come in handy when we do animations.  <b>Once you've logged into nimbus</b>, go to the plugins search in that window and search for the "live server" extension by Ritwick Dey
+									</p>
+
+									<img src = "LiveServer.png">
+
+									<p>
+										Then, open a top level folder containing the code that you want to run, right click on an HTML file you want to run, and click <BR><code>Open with Live Server</code>
+									</p>
+
+									<img src = "OpenServer.png">
+
+									<p>
+										If you want to change the default browser that opens with the live server, then you have to change the <code>settings.json</code> to have the <code>CustomBrowser</code> field.  For example, my <code>settings.json</code> file has the following code to get it to launch Chrome by default
+									</p>
+
+									<script type="syntaxhighlighter" class="brush: js"><![CDATA[
+									{
+										"window.zoomLevel": 2,
+										"terminal.integrated.inheritEnv": false,
+										"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+										"liveServer.settings.CustomBrowser":"chrome"
+									}
+									]]></script> 
+
+									<p>
+										The GIF below shows how to access the <code>settings.json</code> file
+									</p>
+
+									<img src = "LiveServer_CustomBrowser.gif">
+
+									<p>
+										<b>NOTE: </b> The assignments have been tested in Firefox and Chrome, so it's best if you stick to one of those browsers.
+									</p>
+
+	
+									<h3><a name = "vsplugins">Other Recommended Plugins</a></h3>
+
+									<p>
+										Below is a list of additional recommended plugins for this class that you should install
+									</p>
+									<ul>
+										<li>ms-vscode.cpptools</li>
+										<li>ms-vscode.cpptools-extension-pack</li>
+										<li>ms-vscode.cpptools-themes</li>
+										<li>twxs.cmake</li>
+										<li>streetsidesoftware.code-spell-checker</li>
+									</ul>
+
+									<HR>
+
+									<h2><a name = "vscodefeatures">Other Features</a></h2>
+
+									<p>
+										Below are a few features I want to highlight that will come in handy as your working.
+									</p>
+
+									<h4><a name = "unused">Unused variable highlighting</a></h4>
+									<p>
+										If you don't use a variable, it will show up in darker text.  This is very useful when debugging.  It means that either you didn't actually need the variable, you forgot to use it (hence you didn't complete your code), or you spelled it wrong somewhere.  This saved many a student last year! (NOTE: The examples below are in Javascript, but the same applies to C/C++/assembly)
+									</p>
+
+									<img src = "HighlightingUnused.gif" width=800>
+
+									<h4><a name = "replace">Replace within Selection</a></h4>
+									<p>
+										If you want to change the name of a variable in one section of your code, you can do a <code>CTRL+F</code>, which will bring up the find/replace menu, then follow these steps:
+									</p>
+									<img src = "ReplaceSelection.gif" width=800>
+
+									<h4><a name = "docsmethod">Method Documentation</a></h4>
+
+									<p>
+										There's a nice feature where if you start typing <code>/**</code> and hit ENTER, it will autocomplete method documentation for you
+									</p>
+
+									<img src = "VSCodeDocs.gif">
+
+
+
+						</div>
+					</div>
+				<!--Syntax highlighting in Javascript!-->
+				<script type="text/javascript" src="../../../../../syntaxhighlighter/scripts/shCore.js"></script>
+				<script type="text/javascript" src="../../../../syntaxhighlighter/scripts/shBrushJScript.js"></script>
+				<script type="text/javascript" src="../../../../../syntaxhighlighter/scripts/shBrushCpp.js"></script>
+				<script type="text/javascript" src="../../../../../syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
+				<script type="text/javascript" src="../../../../../syntaxhighlighter/scripts/shBrushPython.js"></script>
+				<link type="text/css" rel="stylesheet" href="../../../../../syntaxhighlighter/styles/shCoreDefault.css"/>
+				<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+
+						</div>
+					</div>
+
+			</div>
+			
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- End Sidebar !-->
+
+<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+<!-- End Scripts -->
+	</body>
+</html>

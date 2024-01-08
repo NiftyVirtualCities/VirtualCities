@@ -1,0 +1,9 @@
+* Generate docs
+
+Finished
+------------
+* Fix field of view
+* Finish lights menu
+* Finish camera menu
+* Take new screenshots for the assignment
+* Finish animation tools

@@ -1,0 +1,3 @@
+[submodule "HW1_VirtualCities"]
+	path = HW1_VirtualCities
+	url = https://github.com/NiftyVirtualCities/HW1_VirtualCities.git
