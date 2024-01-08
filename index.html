@@ -19,6 +19,9 @@
     <body>
         <h2>Modular Virtual 3D Cities Assignment</h2>
 
+        <h3><a href = "https://www.ctralie.com">Chris Tralie</a>, <a href = "https://www.ursinus.edu/academics/mathematics-computer-science-and-statistics/">Ursinus College Department of Mathematics, Computer Science, And Statistics</a></h3>
+        <HR>
+
         <ul>
             <li>
                 <h3><a href = "https://github.com/NiftyVirtualCities/HW1_VirtualCities/archive/refs/heads/main.zip">Starter Code</a> (C++ and Java Versions Together, Both with three.js)</h3>
@@ -41,7 +44,7 @@
 
         <h2>Description</h2>
         <p>
-            The purpose of this intro to CS assignment was to give students practice with modularity and method design in a fun application: designing virtual 3D city environments from scratch.  Students were provided with various overloaded methods for drawing primitive 3D shapes in different colors and proportions.  The shapes included as cylinder, ellipsoids, and rectangular prisms.  Students had put these shapes together in methods that drew different city objects, including:
+            The purpose of this intro to CS assignment is to give students practice with modularity and method design in a fun application: designing virtual 3D city environments from scratch.  Students are provided with various overloaded methods for drawing primitive 3D shapes in different colors and proportions.  The shapes include cylinder, ellipsoids, and rectangular prisms.  Students put these shapes together in methods that draw different city objects, including:
             <Ul>
                 <li>
                     A "lollipop tree" (brown cylinder with a green ellipsoid on top)
@@ -58,19 +61,19 @@
             </Ul>
         </p>
         <p>
-            In the process of making these methods, students got practice reading <a href = "Handout/docs/functions.html">method documentation of the primitive shapes</a>, as well as writing their own method documentation for the method parameters specifying positions and orientations of each city object.  
+            In the process of making these methods, students gain practice reading <a href = "docs/functions.html">method documentation of the primitive shapes</a>, as well as writing their own method documentation for the method parameters specifying positions and orientations of each city object.  
         </p>
         <p>
-            Once the individual city objects were completed, students went one level of abstraction higher and created a method to make a city block consisting of all of the objects together.  Finally, they then made a method to call the city block in a loop to create an entire city consisting of multiple city blocks.  
+            Once the individual city objects are completed, students go one level of abstraction higher and create a method to make a city block consisting of all of the objects together.  Finally, they make a method to call the city block in a loop to create an entire city consisting of multiple city blocks.  
         </p>
 
         <p>
-            Students were graded on the accuracy of the city shapes, as well as style and quality of their method documentation.  Students were expected to properly modularize methods in a hierarchy with individual methods for each city object, a method for a city block, and a separate method for the entire city.  If students set their code up correctly, they would only have to pass an x and z offset parameter to the city block method to move all of the objects in the block together.  In this way, the assignment served as a gentle introduction to "scene graphs" and relative coordinate systems in computer graphics, couched in the framework of method design, modularity, and reusability (an ulterior motive was to get intro students excited enough to continue on in the curriculum to reach our capstone computer graphics course).
+            Students are graded on the accuracy of the city shapes, as well as style and quality of their method documentation.  Students are expected to properly modularize methods in a hierarchy with individual methods for each city object, a method for a city block, and a separate method for the entire city.  If students set their code up correctly, they only have to pass an x and z offset parameter to the city block method to move all of the objects in the block together.  In this way, the assignment served as a gentle introduction to "scene graphs" and relative coordinate systems in computer graphics, couched in the framework of method design, modularity, and re-usability (an ulterior motive is to get intro students excited enough to continue on in the curriculum to reach our capstone computer graphics course).
         </p>
 
         <h4>Art Contests</h4>
         <p>
-            Once the students satisfied the primary objective of making a basic city, they were required to make a creative submission to submit to the class "art contest."  The art contest is actually the primary reason I am submitting this assignment to SIGCSE, as I was <b>absolutely blown away by what the students did</b>.  I've run this assignment 4 semesters now, and ever time students went miles beyond what I would have expected.  Therefore, I think I accidentally stumbled into a well of student creativity, and I want to share this with other instructors to help students get excited about CS at the intro level.
+            Once the students satisfied the primary objective of making a basic city, they are required to make a creative submission to submit to the class "art contest."  The art contest is actually the primary reason I am submitting this assignment to SIGCSE, as I have been <b>absolutely blown away by what the students have done on the art contests</b>.  I've run this assignment 4 semesters now, and ever time students went miles beyond what I would have expected.  Therefore, I think I accidentally stumbled into a well of student creativity, and I want to share this with other instructors to help students get excited about CS at the intro level.
         </p>
         <p>
             Here are a few of the many highlights, which span many hilarious and obviously painstaking efforts on the part of my students, who made me very proud:
@@ -81,11 +84,15 @@
                     Complex hierarchical scenes (e.g. "The Almighty" and "Cubes inside Cubes" <a href = "ArtContests/F2020/index.html">Fall 2020</a>, "alligator cow castle" <a href = "ArtContests/S2022/index.html">Spring 2022</a>, "cow abduction acid trip" and "a walk through town" <a href = "ArtContests/F2022/index.html">Fall 2022</a>, "fever dream," "the beginning of the end," "fireside," "animal grazing," "bowling alley," "starry night"<a href = "ArtContests/S2023/index.html">Spring 2023</a>)
                 </li>
             </ul>
+            
+        </p>
+        <p>
+            <b>NOTE:</b> One of the reviewers had a very nice idea about having each student make their own unique city block that can be positioned up to a global translation, and then putting them all together into one big city as a class.  This way, there's a collaborative effort in addition to a competitive effort.  I will probably add this on the next iteration of the assignment!
         </p>
 
         <h4>Assignment Backend Details</h4>
         <p>
-            One of the biggest challenges designing this assignment was to get a cross-platform 3D system to work with minimal hassle.  During the first iteration of the assignment, I ran it in Netbeans + Java, and the primitive methods wrote the student's scene to a JSON file that could be loaded in my home grown graphics engine called "ggslac" (Geometry and Graphics Library for Small Liberal Arts Colleges) that I'd been using to teach a capstone course on computer graphics in our department.  However, I quickly discovered that students liked to go all out on the art contests, and they quickly brought my dinky little education engine to a halt.  Therefore, I upgraded the code this year to instead wrap around <a href = "https://threejs.org/">three.js</a>, which has better support for textured meshes, as well as adaptive space partitioning for real time rendering of the large scenes my students were designing.  The code now outputs an HTML file which includes the appropriate three.js files and which can be loaded directly into a browser.
+            One of the biggest challenges designing this assignment was to get a cross-platform 3D system to work with minimal hassle.  During the first iteration of the assignment, I ran it in Netbeans + Java, and the primitive methods wrote the student's scene to a JSON file that could be loaded in my home grown graphics engine called "<a href = "https://github.com/ctralie/ggslac">ggslac</a>" (Geometry and Graphics Library for Small Liberal Arts Colleges) that I'd been using to teach a capstone course on computer graphics in our department.  However, I quickly discovered that students liked to go all out on the art contests, and they quickly brought my dinky little education engine to a halt.  Therefore, I upgraded the code this year to instead wrap around <a href = "https://threejs.org/">three.js</a>, which has better support for textured meshes, as well as adaptive space partitioning for real time rendering of the large scenes my students were designing.  The code now outputs an HTML file which includes the appropriate three.js files and which can be loaded directly into a browser.
         </p>
 
         <HR>
@@ -130,7 +137,7 @@
                 <td>Weaknesses</td>
                 <td>
                     <p>
-                        Students sometimes complained about having to do some trial and error to get the city objects to look the way they wanted them to.  Students also have to understand a clear separation between the code they're running and the code that's being provided; compared to other assignments in the course, students write less code from scratch themselves, but they at least still have to define their new methods for the city objects from scratch.
+                        Students sometimes noted that they had to do some trial and error to get the city objects to look the way they wanted them to.  Students also have to understand a clear separation between the code they're running and the code that's being provided; compared to other assignments in the course, students write less code from scratch themselves, but they at least still have to define their new methods for the city objects from scratch.
                     </p>
                     <p>
                         Beyond that, in the C++ version of the assignment, I was trying to teach makefiles concurrently with a method review as students were transitioning from Java in their intro course to C++ in this course.  However, I often found that students were confused on the makefiles at that stage of the course, and sometimes simply edited the <code>simplescene.cpp</code> example file I gave them to avoid making a new C++ file and adding an entry for it to the makefile.  So makefile practice has overall been less successful in this assignment than method practice.
@@ -150,22 +157,32 @@
                     </p>
 
                     <p>
-                        The second is a C++ version that outputs HTML files which use <a href = "https://threejs.org/">three.js</a>.  <a href = "VirtualCities_CPP.zip">Click here</a> to download this version.  This version requires standard GNU tools such as C++ and make, but there are no other dependencies.  To make things easier for students, I had them use Visual Studio Code as an IDE, and I had them install a plugin for a local web server that automatically refreshed every time their programs overwrote their HTML files.  This improved earlier versions of the assignment where students had to manually import JSON files into the scene viewer web page every time their code regenerated them.  <a href = "Handout/Software/index.html">Click here</a> for more details on the VSCode and live server setup.
+                        The second is a C++ version that outputs HTML files which use <a href = "https://threejs.org/">three.js</a>.  <a href = "VirtualCities_CPP.zip">Click here</a> to download this version.  This version requires standard GNU tools such as C++ and make, but there are no other dependencies.  To make things easier for students, I had them use Visual Studio Code as an IDE, and I had them install a plugin for a local web server that automatically refreshed every time their programs overwrote their HTML files.  This improved earlier versions of the assignment where students had to manually import JSON files into the scene viewer web page every time their code regenerated them.  <a href = "Software/index.html">Click here</a> for more details on the VSCode and live server setup.
                     </p>
 
                     <p>
-                        In both cases, <b>the web pages should be run in a local web server</b> to display properly and to avoid cross-origin requests when loading meshes.  It is sufficient to run a local web server in this directory with, for instance <code>python -m http.server</code>, and then all art contests submissions should load interactively.  Alternatively, one can use the live server plugin in Visual Studio Code.
+                        In both cases, <b>the web pages should be run in a local web server</b> to display properly and to avoid cross-origin requests when loading meshes.  The easiest way to do this, by far, is to use the <a href = "Software/index.html#liveserver">sive server</a> plugin in VSCode, as this will automatically refresh the page every time students run their code.  
                     </p>
+                    <p>
+                        Alternatively, one can run a local web server in this directory with, for instance <code>python -m http.server</code>
+                    </p>
+                    
+                    <p>
+                        <b>NOTE: </b> In response to reviewer comments about friction from the dependency on VSCode or a local web server, I'm hosting a page at <a href = "HW1_VirtualCities/viewer.html">this link</a> where one can upload their HTML file and the scene will be displayed in that page.
+                    </p>
+
+                    <!--
                     <p>
                         <b>NOTE Also:</b> It would be a fairly trivial extension to make wrappers in other languages like python that draw these primitive shapes, but we have an interest in teaching students C++ in the particular class that this assignment runs in.
                     </p>
+                    -->
                 </td>
             </tr>
             <tr>
                 <td>Teaching Notes</td>
                 <td>
                     <p>
-                        In the C++ version, it's helpful to have a mini assignment where students configure their software environment before starting this assignment, since compiling code in C++ can be tricky for beginngers.  I used to have detailed instructions on how to get WSL setup on Windows, and to get the proper libraries setup on Mac and Linux.  But recently, I've switched to using an Ubuntu server at our college with a uniform software setup that students can ssh into using Visual Studio Code, and I've found this works quite nicely and requires less tech support.
+                        In the C++ version, it's helpful to have a mini assignment where students configure their software environment before starting this assignment, since compiling code in C++ can be tricky for beginners.  I used to have detailed instructions on how to get WSL setup on Windows, and to get the proper libraries setup on Mac and Linux.  But recently, I've switched to using an Ubuntu server at our college with a uniform software setup that students can ssh into using Visual Studio Code, and I've found this works quite nicely and requires less tech support.
                     </p>
 
                     <p>

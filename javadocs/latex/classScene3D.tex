@@ -1,0 +1,509 @@
+\hypertarget{classScene3D}{}\doxysection{Scene3D Class Reference}
+\label{classScene3D}\index{Scene3D@{Scene3D}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classScene3D_abc225f6cb318dce2fe51d97451230973}{Scene3D}} ()
+\item 
+void \mbox{\hyperlink{classScene3D_ad0d876a1b2dfc166cf8e23ad412f5e73}{add\+Box}} (double cx, double cy, double cz, double xlen, double ylen, double zlen, double r, double g, double b, double roughness, double metalness, double rx, double ry, double rz)
+\item 
+void \mbox{\hyperlink{classScene3D_abee3c4e34328838d987eebaa8ad249fc}{add\+Box}} (double cx, double cy, double cz, double xlen, double ylen, double zlen, double r, double g, double b, double roughness, double metalness)
+\item 
+void \mbox{\hyperlink{classScene3D_a9b79832e3ccb64473d9cf0cf3046fbdf}{add\+Cylinder}} (double cx, double cy, double cz, double radius, double height, double r, double g, double b, double roughness, double metalness, double rx, double ry, double rz, double sx, double sy, double sz)
+\item 
+void \mbox{\hyperlink{classScene3D_a519adbcd35f760dea27ef9c27ff0574a}{add\+Cylinder}} (double cx, double cy, double cz, double radius, double height, double r, double g, double b, double roughness, double metalness)
+\item 
+void \mbox{\hyperlink{classScene3D_af367df80e9baa35a168695fef3e61dd3}{add\+Cone}} (double cx, double cy, double cz, double radius, double height, double r, double g, double b, double roughness, double metalness, double rx, double ry, double rz, double sx, double sy, double sz)
+\item 
+void \mbox{\hyperlink{classScene3D_a369c0de16fde532dcfcc13ae8c6da0a4}{add\+Cone}} (double cx, double cy, double cz, double radius, double height, double r, double g, double b, double roughness, double metalness)
+\item 
+void \mbox{\hyperlink{classScene3D_af1e91e5b49ad953d19d8c2a0bef1a3ae}{add\+Ellipsoid}} (double cx, double cy, double cz, double radx, double rady, double radz, double r, double g, double b, double roughness, double metalness, double rx, double ry, double rz)
+\item 
+void \mbox{\hyperlink{classScene3D_ad76a907c36b2b7e6bab76a0ea4cbb0a0}{add\+Ellipsoid}} (double cx, double cy, double cz, double radx, double rady, double radz, double r, double g, double b, double roughness, double metalness)
+\item 
+void \mbox{\hyperlink{classScene3D_ac7a72042a8babdd0b63fc9d759efd11f}{add\+Sphere}} (double cx, double cy, double cz, double radius, double r, double g, double b, double roughness, double metalness)
+\item 
+void \mbox{\hyperlink{classScene3D_af44ffeee219620b3a7649cf60e9ccb50}{add\+Mesh}} (String path, double cx, double cy, double cz, double rx, double ry, double rz, double sx, double sy, double sz, double r, double g, double b, double roughness, double metalness)
+\item 
+void \mbox{\hyperlink{classScene3D_af5aa127152c48f8884a443777bc13b59}{add\+Textured\+Mesh}} (String path, String matpath, double cx, double cy, double cz, double rx, double ry, double rz, double sx, double sy, double sz, double shininess)
+\item 
+void \mbox{\hyperlink{classScene3D_a000fcd37c6df98e05cdc4c6d5851f345}{add\+Camera}} (double x, double y, double z, double rot)
+\item 
+void \mbox{\hyperlink{classScene3D_a944c6e529e297a0fe798bd83a8136e94}{add\+Point\+Light}} (double x, double y, double z, double r, double g, double b, double intensity)
+\item 
+void \mbox{\hyperlink{classScene3D_a18dc61026dbdc8cf24c054d5d805b68e}{add\+Directional\+Light}} (double x, double y, double z, double r, double g, double b, double intensity)
+\item 
+void \mbox{\hyperlink{classScene3D_a6439c3ae573fa8a6706e164ebe7ad620}{save\+Scene}} (String filename, String scene\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classScene3D_abc225f6cb318dce2fe51d97451230973}\label{classScene3D_abc225f6cb318dce2fe51d97451230973}} 
+\index{Scene3D@{Scene3D}!Scene3D@{Scene3D}}
+\index{Scene3D@{Scene3D}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{Scene3D()}{Scene3D()}}
+{\footnotesize\ttfamily Scene3\+D.\+Scene3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classScene3D_abee3c4e34328838d987eebaa8ad249fc}\label{classScene3D_abee3c4e34328838d987eebaa8ad249fc}} 
+\index{Scene3D@{Scene3D}!addBox@{addBox}}
+\index{addBox@{addBox}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addBox()}{addBox()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Box (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{xlen,  }\item[{double}]{ylen,  }\item[{double}]{zlen,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an axis-\/aligned box to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of box \\
+\hline
+{\em cy} & Y center of box \\
+\hline
+{\em cz} & Z center of box \\
+\hline
+{\em xlen} & Length of box along x-\/axis \\
+\hline
+{\em ylen} & Length of box along y-\/axis \\
+\hline
+{\em zlen} & Length of box along z-\/axis \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_ad0d876a1b2dfc166cf8e23ad412f5e73}\label{classScene3D_ad0d876a1b2dfc166cf8e23ad412f5e73}} 
+\index{Scene3D@{Scene3D}!addBox@{addBox}}
+\index{addBox@{addBox}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addBox()}{addBox()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Box (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{xlen,  }\item[{double}]{ylen,  }\item[{double}]{zlen,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness,  }\item[{double}]{rx,  }\item[{double}]{ry,  }\item[{double}]{rz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a box to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of box \\
+\hline
+{\em cy} & Y center of box \\
+\hline
+{\em cz} & Z center of box \\
+\hline
+{\em xlen} & Length of box along x-\/axis \\
+\hline
+{\em ylen} & Length of box along y-\/axis \\
+\hline
+{\em zlen} & Length of box along z-\/axis \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+{\em rx} & Rotation about x-\/axis, in degrees \\
+\hline
+{\em ry} & Rotation about y-\/axis, in degrees \\
+\hline
+{\em rz} & Rotation about z-\/axis, in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_a000fcd37c6df98e05cdc4c6d5851f345}\label{classScene3D_a000fcd37c6df98e05cdc4c6d5851f345}} 
+\index{Scene3D@{Scene3D}!addCamera@{addCamera}}
+\index{addCamera@{addCamera}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addCamera()}{addCamera()}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Camera (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z,  }\item[{double}]{rot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a particular camera to the scene 
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of camera \\
+\hline
+{\em y} & Y position of camera \\
+\hline
+{\em z} & Z position of camera \\
+\hline
+{\em rot} & Rotation in degrees about y-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_a369c0de16fde532dcfcc13ae8c6da0a4}\label{classScene3D_a369c0de16fde532dcfcc13ae8c6da0a4}} 
+\index{Scene3D@{Scene3D}!addCone@{addCone}}
+\index{addCone@{addCone}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addCone()}{addCone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Cone (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radius,  }\item[{double}]{height,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an axis-\/aligned cone to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of cone \\
+\hline
+{\em cy} & Y center of cone \\
+\hline
+{\em cz} & Z center of cone \\
+\hline
+{\em radius} & Radius of the cone \\
+\hline
+{\em height} & Height of the cone \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_af367df80e9baa35a168695fef3e61dd3}\label{classScene3D_af367df80e9baa35a168695fef3e61dd3}} 
+\index{Scene3D@{Scene3D}!addCone@{addCone}}
+\index{addCone@{addCone}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addCone()}{addCone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Cone (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radius,  }\item[{double}]{height,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness,  }\item[{double}]{rx,  }\item[{double}]{ry,  }\item[{double}]{rz,  }\item[{double}]{sx,  }\item[{double}]{sy,  }\item[{double}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a cone to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of cone \\
+\hline
+{\em cy} & Y center of cone \\
+\hline
+{\em cz} & Z center of cone \\
+\hline
+{\em radius} & Radius of the cone \\
+\hline
+{\em height} & Height of the cone \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+{\em rx} & Rotation about x-\/axis, in degrees \\
+\hline
+{\em ry} & Rotation about y-\/axis, in degrees \\
+\hline
+{\em rz} & Rotation about z-\/axis, in degrees \\
+\hline
+{\em sx} & Scale about x-\/axis \\
+\hline
+{\em sy} & Scale about y-\/axis \\
+\hline
+{\em sz} & Scale about z-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_a519adbcd35f760dea27ef9c27ff0574a}\label{classScene3D_a519adbcd35f760dea27ef9c27ff0574a}} 
+\index{Scene3D@{Scene3D}!addCylinder@{addCylinder}}
+\index{addCylinder@{addCylinder}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addCylinder()}{addCylinder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Cylinder (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radius,  }\item[{double}]{height,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an axis-\/aligned cylinder to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of cylinder \\
+\hline
+{\em cy} & Y center of cylinder \\
+\hline
+{\em cz} & Z center of cylinder \\
+\hline
+{\em radius} & Radius of the cylinder \\
+\hline
+{\em height} & Height of the cylinder \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_a9b79832e3ccb64473d9cf0cf3046fbdf}\label{classScene3D_a9b79832e3ccb64473d9cf0cf3046fbdf}} 
+\index{Scene3D@{Scene3D}!addCylinder@{addCylinder}}
+\index{addCylinder@{addCylinder}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addCylinder()}{addCylinder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Cylinder (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radius,  }\item[{double}]{height,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness,  }\item[{double}]{rx,  }\item[{double}]{ry,  }\item[{double}]{rz,  }\item[{double}]{sx,  }\item[{double}]{sy,  }\item[{double}]{sz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a cylinder to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of cylinder \\
+\hline
+{\em cy} & Y center of cylinder \\
+\hline
+{\em cz} & Z center of cylinder \\
+\hline
+{\em radius} & Radius of the cylinder \\
+\hline
+{\em height} & Height of the cylinder \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+{\em rx} & Rotation about x-\/axis, in degrees \\
+\hline
+{\em ry} & Rotation about y-\/axis, in degrees \\
+\hline
+{\em rz} & Rotation about z-\/axis, in degrees \\
+\hline
+{\em sx} & Scale about x-\/axis \\
+\hline
+{\em sy} & Scale about y-\/axis \\
+\hline
+{\em sz} & Scale about z-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_a18dc61026dbdc8cf24c054d5d805b68e}\label{classScene3D_a18dc61026dbdc8cf24c054d5d805b68e}} 
+\index{Scene3D@{Scene3D}!addDirectionalLight@{addDirectionalLight}}
+\index{addDirectionalLight@{addDirectionalLight}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addDirectionalLight()}{addDirectionalLight()}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Directional\+Light (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{intensity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a directional light to the scene at a particular (x, y, z) position, pointing with parallel rays towards the origin (0, 0, 0) and with a particular (r, g, b) color 
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of light \\
+\hline
+{\em y} & Y position of light \\
+\hline
+{\em z} & Z position of light \\
+\hline
+{\em r} & Red component of light in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component of light in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component of light in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em intensity} & The intensity of the light, in \mbox{[}0, 1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_ad76a907c36b2b7e6bab76a0ea4cbb0a0}\label{classScene3D_ad76a907c36b2b7e6bab76a0ea4cbb0a0}} 
+\index{Scene3D@{Scene3D}!addEllipsoid@{addEllipsoid}}
+\index{addEllipsoid@{addEllipsoid}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addEllipsoid()}{addEllipsoid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Ellipsoid (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radx,  }\item[{double}]{rady,  }\item[{double}]{radz,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an axis-\/aligned ellipsoid to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of ellipsoid \\
+\hline
+{\em cy} & Y center of ellipsoid \\
+\hline
+{\em cz} & Z center of ellipsoid \\
+\hline
+{\em radx} & Semi-\/axis x radius \\
+\hline
+{\em rady} & Semi-\/axis y radius \\
+\hline
+{\em radz} & Semi-\/axis z radius \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_af1e91e5b49ad953d19d8c2a0bef1a3ae}\label{classScene3D_af1e91e5b49ad953d19d8c2a0bef1a3ae}} 
+\index{Scene3D@{Scene3D}!addEllipsoid@{addEllipsoid}}
+\index{addEllipsoid@{addEllipsoid}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addEllipsoid()}{addEllipsoid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Ellipsoid (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radx,  }\item[{double}]{rady,  }\item[{double}]{radz,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness,  }\item[{double}]{rx,  }\item[{double}]{ry,  }\item[{double}]{rz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an ellipsoid to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of ellipsoid \\
+\hline
+{\em cy} & Y center of ellipsoid \\
+\hline
+{\em cz} & Z center of ellipsoid \\
+\hline
+{\em radx} & Semi-\/axis x radius \\
+\hline
+{\em rady} & Semi-\/axis y radius \\
+\hline
+{\em radz} & Semi-\/axis z radius \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+{\em rx} & Rotation about x-\/axis, in degrees \\
+\hline
+{\em ry} & Rotation about y-\/axis, in degrees \\
+\hline
+{\em rz} & Rotation about z-\/axis, in degrees \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_af44ffeee219620b3a7649cf60e9ccb50}\label{classScene3D_af44ffeee219620b3a7649cf60e9ccb50}} 
+\index{Scene3D@{Scene3D}!addMesh@{addMesh}}
+\index{addMesh@{addMesh}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addMesh()}{addMesh()}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Mesh (\begin{DoxyParamCaption}\item[{String}]{path,  }\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{rx,  }\item[{double}]{ry,  }\item[{double}]{rz,  }\item[{double}]{sx,  }\item[{double}]{sy,  }\item[{double}]{sz,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a mesh to the scene
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & File path to special mesh, relative to this directory \\
+\hline
+{\em cx} & Offset in x \\
+\hline
+{\em cy} & Offset in y \\
+\hline
+{\em cz} & Offset in z \\
+\hline
+{\em rx} & Rotation around x-\/axis \\
+\hline
+{\em ry} & Rotation around y-\/axis \\
+\hline
+{\em rz} & Rotation around z-\/axis \\
+\hline
+{\em sx} & Scale along x-\/axis \\
+\hline
+{\em sy} & Scale along y-\/axis \\
+\hline
+{\em sz} & Scale along z-\/axis \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_a944c6e529e297a0fe798bd83a8136e94}\label{classScene3D_a944c6e529e297a0fe798bd83a8136e94}} 
+\index{Scene3D@{Scene3D}!addPointLight@{addPointLight}}
+\index{addPointLight@{addPointLight}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addPointLight()}{addPointLight()}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Point\+Light (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{intensity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a point light to the scene at a particular (x, y, z) position and with a particular (r, g, b) color 
+\begin{DoxyParams}{Parameters}
+{\em x} & X position of light \\
+\hline
+{\em y} & Y position of light \\
+\hline
+{\em z} & Z position of light \\
+\hline
+{\em r} & Red component of light in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component of light in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component of light in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em intensity} & The intensity of the light, in \mbox{[}0, 1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_ac7a72042a8babdd0b63fc9d759efd11f}\label{classScene3D_ac7a72042a8babdd0b63fc9d759efd11f}} 
+\index{Scene3D@{Scene3D}!addSphere@{addSphere}}
+\index{addSphere@{addSphere}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addSphere()}{addSphere()}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Sphere (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{radius,  }\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{roughness,  }\item[{double}]{metalness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a sphere to the scene 
+\begin{DoxyParams}{Parameters}
+{\em cx} & X center of the sphere \\
+\hline
+{\em cy} & Y center of the sphere \\
+\hline
+{\em cz} & Z center of the sphere \\
+\hline
+{\em radius} & Radius of the sphere \\
+\hline
+{\em r} & Red component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em g} & Green component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em b} & Blue component in \mbox{[}0, 255\mbox{]} \\
+\hline
+{\em roughness} & How rough the material appears. 0.\+0 means a smooth mirror reflection, 1.\+0 means fully diffuse. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.roughness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+roughness}} \\
+\hline
+{\em metalness} & How much the material is like a metal. Non-\/metallic materials such as wood or stone use 0.\+0, metallic use 1.\+0, with nothing (usually) in between. \href{https://threejs.org/docs/\#api/en/materials/MeshStandardMaterial.metalness}{\texttt{ https\+://threejs.\+org/docs/\#api/en/materials/\+Mesh\+Standard\+Material.\+metalness}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_af5aa127152c48f8884a443777bc13b59}\label{classScene3D_af5aa127152c48f8884a443777bc13b59}} 
+\index{Scene3D@{Scene3D}!addTexturedMesh@{addTexturedMesh}}
+\index{addTexturedMesh@{addTexturedMesh}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{addTexturedMesh()}{addTexturedMesh()}}
+{\footnotesize\ttfamily void Scene3\+D.\+add\+Textured\+Mesh (\begin{DoxyParamCaption}\item[{String}]{path,  }\item[{String}]{matpath,  }\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{cz,  }\item[{double}]{rx,  }\item[{double}]{ry,  }\item[{double}]{rz,  }\item[{double}]{sx,  }\item[{double}]{sy,  }\item[{double}]{sz,  }\item[{double}]{shininess }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add a textured mesh to the scene
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & File path to mesh, relative to this directory \\
+\hline
+{\em matpath} & File path to material, relative to this directory \\
+\hline
+{\em cx} & Offset in x \\
+\hline
+{\em cy} & Offset in y \\
+\hline
+{\em cz} & Offset in z \\
+\hline
+{\em rx} & Rotation around x-\/axis \\
+\hline
+{\em ry} & Rotation around y-\/axis \\
+\hline
+{\em rz} & Rotation around z-\/axis \\
+\hline
+{\em sx} & Scale along x-\/axis \\
+\hline
+{\em sy} & Scale along y-\/axis \\
+\hline
+{\em sz} & Scale along z-\/axis \\
+\hline
+{\em shininess} & A number in \mbox{[}0, 255\mbox{]} describing how shiny the mesh is \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScene3D_a6439c3ae573fa8a6706e164ebe7ad620}\label{classScene3D_a6439c3ae573fa8a6706e164ebe7ad620}} 
+\index{Scene3D@{Scene3D}!saveScene@{saveScene}}
+\index{saveScene@{saveScene}!Scene3D@{Scene3D}}
+\doxysubsubsection{\texorpdfstring{saveScene()}{saveScene()}}
+{\footnotesize\ttfamily void Scene3\+D.\+save\+Scene (\begin{DoxyParamCaption}\item[{String}]{filename,  }\item[{String}]{scene\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Save this scene to a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to which to save file (should end with .json) \\
+\hline
+{\em scene\+Name} & Title of the scene to display in the viewer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Scene3D_8java}{Scene3\+D.\+java}}\end{DoxyCompactItemize}
