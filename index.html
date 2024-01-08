@@ -1,12 +1,5 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-<!-- Header !-->
-	<head>
+    <head>
 		<title></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -23,519 +16,171 @@
         }
         </style>
 	</head>
-	<body>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-<!-- End Header !-->
-
-							<!-- Content -->
-								<section>
-									<header class="main">
-                                        <h2>Assignment 1: Build Your Virtual City (34 Points)</h2>
-										<h3><a href = "https://www.ctralie.com">Chris Tralie</a></h3>
-										<HR>
-										<h3>Table of Contents</h3>
-                                        <ul>
-											<li><a href = "#overview">Overview/Logistics</a>
-												<ul>
-													<li><a href = "#objectives">Learning Objectives</a></li>
-													<li><a href = "#readme">What To Submit</a></li>
-												</ul>
-											</li>
-											<li><a href = "#coordinates">Background: 3D Coordinate Systems</a></li>
-											<li><a href = "#colors">Background: RGB Colors</a></li>
-											<li><a href = "#shapes3d">Background: 3D Scenes And Shapes</a>
-												<ul>
-													<li><a href = "#box">3D Box</a></li>
-													<li><a href = "#cylinder">Cylinder</a></li>
-													<li><a href = "#cone">Cone</a></li>
-													<li><a href = "#sphere">Sphere</a></li>
-													<li><a href = "#ellipsoid">Ellipsoid</a></li>
-													<li><a href = "#meshes">Meshes</a></li>
-													<li><a href = "#textured">Textured Meshes</a></li>
-												</ul>
-											</li>
-											<li><a href = "#programing">Programming Tasks</a>
-												<ul>
-													<li><a href = "#sign">Example: Sign</a></li>
-													<li><a href = "#running">Running The Engine And Viewing The Scene</a></li>
-													<li><a href = "#makefile">Setup / Makefile (3 Points)</a></li>
-													<li><a href = "#tree">Tree (5 Points)</a></li>
-													<li><a href = "#firehydrant">Fire Hydrant (5 Points)</a></li>
-													<li><a href = "#stoplight">Stop Light (5 Points)</a></li>
-													<li><a href = "#sedan">Sedan (5 Points)</a></li>
-													<li><a href = "#block">City Block (5 Points)</a></li>
-													<li><a href = "#style">Style (3 Points)</a></li>
-													<li><a href = "#artcontest">Mandatory Art Contest (3 Points)</a></li>
-												</ul>
-											</li>
-										</ul>
-
-									</header>
-
-									<div id="page-content">
-
-                                        <h2><a name = "overview">Overview / Logistics</a></h2>
-
-										<p>
-											Watch the video below for a primer on this assignment:
-										</p>
-
-										<iframe width="560" height="315" src="https://www.youtube.com/embed/lhvl-rUBLO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-										<p>
-                                            The purpose of this assignment is to enable you to brush up on your knowledge of methods and how they fit together, and to practice them in a new language: C++.  It is also an opportunity to practice reading documentation for existing methods to learn how to use them, which is something you will often do in practice, since we rarely re-invent the wheel and often use code that other people write (often called a <a href = "https://en.wikipedia.org/wiki/Library_(computing)">library</a>).  
-										</p>
-
-										<p>
-											This assignment will also get you to practice the <b>edit -> compile -> run -> edit</b> loop, since you will have to tweak your shapes many times to get a good result.
-										</p>
-										
-										<p>
-											The specific task in this assignment is to write code to generate 3D worlds.  It's much easier if you write methods whose sole job is to draw a particular city object, like a fire hydrant or stop light. Then, you can replicate these objects many times by calling the methods over and over again to create complicated parts of the your world (like city blocks).  Putting complicated things completely in one chunk of code to be reused many times with minor variations is an example of <b>encapsulation</b>, which is a major theme of this class.
-										</p>
-										
-
-										<p>
-											You will be writing code that writes HTML files with information about 3D scenes, which you can open with the <a href = "Software/index.html#liveserver">live server in VSCode</a>.
-                                        </p>
-
-                                        <p>
-                                            <h3><a name = "objectives">Learning Objectives</a></h3>
-                                            <ul>
-                                                <li>Write methods to fit a specification</li>
-                                                <li>Follow documentation to use pre-defined methods</li>
-                                                <li>Use methods together in concert to accomplish a task</li>
-                                                <li>Write a complete program with very little code in the <code>main</code> function</li>
-                                                <li>Work with 3D coordinates programmatically </li>
-												<li>
-													Use C++ makefiles and the terminal to build and run programs
-												</li>
-                                            </ul>
-                                        </p>
-
-                                        <h3><a name = "readme">What to submit</a></h3>
-										<p>When you are finished, you should submit zip file of your <code>HW1_VirtualCities</code> directory to canvas.  This should contain all of your code, the <code>.json</code> scene files for both the city scene and your <a href = "#artcontest">art contest</a>, and any animated GIFs you made for your art contest.  <b>Also submit a comment on canvas with answers to the following questions</b>
-										
-										<ol>
-											<li>
-												What title would you like to use for your art contest submissions, and what name/pseudonym you would like to use? (results will be displayed on the class web site).
-											</li>
-											<li>
-												Any other concerns that you have. For instance, if you have a bug that you were unable to solve but you made progress, write that here. The more you articulate the problem the more partial credit you will receive (fine to leave this blank)
-											</li>
-										</ol>
-
-
-
-									<h2><a name = "coordinates">Background: 3D Coordinate Systems</a></h2>
-									
-									<p>
-										A point in 3D space is represented with 3 coordinates: one in the x-axis, one in the y-axis, and one in the z-axis.  There are a few different ways to define such a coordinate system, but we will stick to the <a href = "https://en.wikipedia.org/wiki/OpenGL">OpenGL</a> convention in this class.  Below is a sketch of the positive coordinate axes for x, y, and z.  A point (a, b, c) can be obtained by creating a rectangular prism with side length a along the x-axis, b along the y-axis, and c along the z-axis.  The point then resides on the vertex of the cube furthest from the origin where the three axes meet (the red point).
-									</p>
-
-
-									<img src = "Coords3D.svg">
-
-									<h4>Rotations in 3D</h4>
-									<p>
-										In this assignment, rotations are represented by so-called "Euler Angles."  In our case, rotation first happens about the X-axis, then the Y-axis, then the Z-axis.  There's more information at <a href = "https://ursinus-cs476-f2022.github.io/CoursePage/Assignments/HW3a_EulerAngles/index.html">this link</a> for those who are curious.
-									</p>
-
-
-									<h2><a name = "colors">Background: RGB Colors</a></h2>
-
-									<p>
-										In addition to perceiving space in 3 dimensions, humans interestingly also perceive color in 3 dimensions.  One basis for color representation is the "RGB" or "Red, Green, Blue" axes.  Each axis is represented with 8 bits, so possible values are from 0 (no color) to 255 (full saturation of that color).  For instance, <font color = "red">rgb(255, 0, 0)</font> is red, and <font color="blue">rgb(0, 0, 255)</font> is blue.
-									</p>
-
-
-									<p>
-										The widget below allows you to play around with colors, which you may want to do for the <a href = "#artcontest">art contest</a>.
-									</p>
-
-									<iframe src = "color.html" width="200" height="200"></iframe>
-										
-									<h2><a name = "shapes3d">Background: 3D Scenes And Shapes</a></h2>
-
-									<p>
-										In this assignment, you will be creating 3D worlds, also known as "scenes," that can be loaded into the browser.  As in the <a href = "../../Labs/Lab1_Holidays/">HTML holidays</a> lab, your C++ program will write HTML code that you then launch.  You don't have to worry writing code strings yourself this time, though.  Instead, I have provided a series of high level functions that you can use to draw shapes, and which will automatically convert to code on the backend that uses the <a href = "https://threejs.org/">three.js library</a>.
-									</p>
-
-									<p>
-										The full documentation for drawing shapes can be found <a href = "docs/classScene3D.html">at this link</a>. Below are a few examples with links to the respective documentation.  There are two versions of most methods: one for drawing an "axis-aligned" shape, and one for drawing a rotated version.  You'll mostly be using the axis-aligned versions in the tasks.
-									</p>
-
-									<h3><a name = "box">3D Box</a></h3>
-
-									<ul>
-										<li>
-											<a href = "docs/classScene3D.html#ae8eac9d945e2774945d5be751bd8095f">Click here</a> to view the documentation for drawing an axis-aligned box.
-										</li>
-										<li>
-											<a href = "docs/classScene3D.html#aad31694a1aa102fbdaba7bf882ddaa74">Click here</a> to view the documentation for drawing a rotated box.
-										</li>
-									</ul>
-
-									Example
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										// Draw a green diffuse and wood-like box centered at (0, 2, -6) that is 1 x 4 x 1
-										scene.addBox(0, 2, -6, 1, 4, 1, 0, 255, 0, 1, 0);
-									]]></script>
-
-									<img src = "Box.png">
-
-
-
-									<h3><a name = "cylinder">Cylinder</a></h3>
-
-									<ul>
-										<li>
-											<a href = "docs/classScene3D.html#a689f70b88a16abf9779db98bb49e0e4b">Click here</a> to view the documentation for drawing an axis-aligned cylinder.
-										</li>
-										<li>
-											<a href = "docs/classScene3D.html#a35de8e274def891b4b7f28b67409d039">Click here</a> to view the documentation for drawing a rotated cylinder.
-										</li>
-									</ul>
-
-									Example
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										// Draw a yellow cylinder centered at (0, 1, -2) that has a 
-										// height of 2 and a radius of 0.5
-										scene.addCylinder(0, 1, -2, 0.5, 2, 255, 255, 0, 1, 0);
-									]]></script>
-
-									<img src = "Cylinder.png">
-
-
-
-									<h3><a name = "cone">Cone</a></h3>
-
-									<ul>
-										<li>
-											<a href = "docs/classScene3D.html#ac818fe40e518b1b97b4ec4650fbe1245">Click here</a> to view the documentation for drawing an axis-aligned cone.
-										</li>
-										<li>
-											<a href = "docs/classScene3D.html#afd74c5df64a02fdaffb033aaaa253d2e">Click here</a> to view the documentation for drawing a rotated cone.
-										</li>
-									</ul>
-
-									Example
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										// Draw a blue cone centered at (4, 0, 0) with radius 0.5 and height 6
-										scene.addCone(4, 0, 0, 0.5, 6, 0, 0, 255, 1, 0);
-									]]></script> 
-
-									<img src = "Cone.png">
-
-
-
-
-									<h3><a name = "sphere">Sphere</a></h3>
-
-									<ul>
-										<li>
-											<a href = "docs/classScene3D.html#a70a0689eb551665a49eefcb0559aeea2">Click here</a> to view the documentation for drawing a sphere.
-										</li>
-									</ul>
-
-									Example
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										// Draw a cyan sphere with radius 1 centered at (-4, 4, 0)
-										scene.addSphere(-4, 4, 0, 1, 0, 255, 255, 1, 0);
-									]]></script>
-
-									<img src = "Sphere.png">
-
-
-
-									<h3><a name = "ellipsoid">Ellipsoid</a></h3>
-
-									<p>
-										An ellipsoid can be viewed as a stretched out version of a sphere or a 3D generalization of an ellipse.
-									</p>
-
-									<ul>
-										<li>
-											<a href = "docs/classScene3D.html#a361eb8568a55b6efaa185195efd07910">Click here</a> to view the documentation for drawing an axis-aligned ellipsoid.
-										</li>
-										<li>
-											<a href = "docs/classScene3D.html#aab0d18c5203abee9c2773a6a60d43277">Click here</a> to view the documentation for drawing a rotated ellipsoid.
-										</li>
-									</ul>
-
-									Example
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										// Draw a red ellipsoid with axes 1/2/1 centered at (0, 5, -10)
-										scene.addEllipsoid(0, 5, -10, 1, 2, 1, 255, 0, 0, 1, 0);
-									]]></script>
-
-									<img src = "Ellipsoid.png">
-
-									<h3><a name = "meshes">Meshes</a></h3>
-									<p>
-										For the <a href = "#artcontest">art contest</a>, you have a variety of <a href = "https://en.wikipedia.org/wiki/Triangle_mesh">triangle meshes</a> available, including 100 shapes from the <a href = "https://shape.cs.princeton.edu/benchmark/">Princeton shape benchmark</a> and a few others, which can all be found in the <code><a href = "HW1_VirtualCities/meshes">meshes</a></code> folder of your assignment.  <a href = "docs/classScene3D.html#a7a876ee1d95ea42b324b9674558d4415">Click here</a> to view the documentation for the <code>addMesh</code> method.
-
-									<p>
-										Here's an example with three of the meshes.  You may need to scale them to get them to the size you want, since they have all been "normalized" to the same scale.
-									</p>
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-				
-										// Add a prof centered at (0, 2, -5) with (0, 0, 0) rotation, scale 2x2x2, and 
-										// color (100, 100, 100)
-										scene.addMesh("meshes/proftralie.obj", 0, 2, -5, 0, 0, 0, 2, 2, 2, 100, 100, 100, 1, 0);
-										// Add a cyan cow at location (0, 1, 5)
-										scene.addMesh("meshes/cow.obj", 0, 1, 5, 0, 0, 0, 1, 1, 1, 0, 255, 255, 1, 0);
-										// Add a green octopus at location (5, 0, -5)
-										scene.addMesh("meshes/Octopus9.obj", 5, 1, -5, 0, 0, 0, 1, 1, 1, 0, 255, 0, 1, 0);]]></script>
-
-									<img src = "SpecialMeshes.png">
-
-									<h3><a name = "textured">Textured Meshes</a></h3>
-									<p>
-										In addition to 3D surfaces with a uniform color, it is also possible to load meshes with a <b>texture</b>, or a picture that gets wrapped around the mesh.  
-									</p>
-
-									<p>
-										<a href = "docs/classScene3D.html#ab36e8895f015238a2d91429a638679fa">Click here</a> to see documentation on this method.
-									</p>
-
-									<p>
-										I've provided one such mesh with the project: the <a href = "https://www.ucsmokestack.com">Ursinus smokestack</a>.  Below is code that shows how to draw it:
-									</p>
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										// Add the smokestack centered at position (0, 18, -20), blown up by
-										// a factor of 10 in all dimensions
-										scene.addTexturedMesh("meshes/smokestack/medres.obj", "meshes/smokestack/medres.mtl",
-										 						0, 18, -20, 0, 180, 0, 10, 10, 10, 0);]]></script>
-									
-										<p>And below is the scene that results</p>
-
-									<img src = "smokestack.png">
-									<p>
-										For the art contest, you can find meshes like this online, as long as you credit them.  If they're not in obj format, let me know and I can help convert them.
-									</p>
-
-
-									<h2><a name = "programming">Programming Tasks</a></h2>
-
-									<p>
-										You will start by making a series of methods that draw specific city objects.  Since you'll want to draw many copies of these in different places, <b>you must specify parameters to move the shapes around</b>.  For example, if I have a box that's normally centered at (1, 2, 5), I should be able to specify a difference of <code>cx</code> and <code>cz</code> to shift it in the X and Z directions, so that the new box would be centered at (1+cx, 2, 5+cz)  <i>You don't have to get the exact shapes that are shown in the pictures</i>, but you should get reasonably close.  I'll start by giving you a simple example below that draws a street sign.
-									</p>
-
-									<h3><a name = "sign">Example: Sign</a></h3>
-									<p>
-										We can draw a simple sign with a thin cylinder for its poll and a thin box for the sign itself.  Below is an example of how one might accomplish this with a method
-									</p>
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										/**
-										* Draw a simple sign that consists of a 2 meter tall cylinder for the
-										* poll and a 0.5x0.5x0.02 meter box for the sign itself
-										* 
-										* @param scene The scene to which to add the sign (passed by reference)
-										* @param cx Center of the sign in x
-										* @param cz Center of the sign in z
-										* @param isEastWest If true, the sign is oriented from east to west.  Otherwise,
-										*                   the sign is oriented from north to south
-										* @param r Red component of the sign
-										* @param g Green component of the sign
-										* @param b Blue component of the sign
-										*/
-										void drawSign(Scene3D& scene, double cx, double cz, 
-																	bool isEastWest, double r, double g, double b) {
-											// Draw the main pole
-											scene.addCylinder(cx, 1, cz, 0.05, 2, 127, 127, 127, 1, 0); 
-											if (isEastWest) {
-												// Draw a 0.5 x 0.5 box in the X/Y plane, with a thin dimension in Z
-												scene.addBox(cx, 2, cz, 0.5, 0.5, 0.1, r, g, b, 1, 0);
-											}
-											else {
-												// Draw a 0.5 x 0.5 box in the Y/Z plane, with a thin dimension in X
-												scene.addBox(cx, 2, cz, 0.1, 0.5, 0.5, r, g, b, 1, 0);
-											}
-										}  
-									   ]]></script>
-
-									<p>
-										Here's an example code snippet that calls this method to create two signs.  For kicks, I also threw in Homer Simpson and the painted smokestack!
-									</p>
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										// Draw a red sign 5 units in front in z and two units to 
-										// the left in x that's oriented from east to west
-										drawSign(scene, -2, -5, true, 255, 0, 0); // Red (255, 0, 0)
-										// Draw a green sign 10 units in front of z that's 
-										// oriented from north to south
-										drawSign(scene, 0, -10, false, 0, 255, 0); // Green (0, 255, 0)
-										// Draw a shiny, stone-like, yellow Homer Simpson
-										scene.addMesh("meshes/homer.obj", 1, 1.4, -7, 0, 0, 0, 1, 1, 1, 255, 255, 0, 1, 1); 
-										scene.addTexturedMesh("meshes/smokestack/medres.obj", "meshes/smokestack/medres.mtl", 
-																0, 18, -20, 0, 180, 0, 10, 10, 10, 0);
-									]]></script>
-
-									<img src = "Signs.png">
-									<p>
-										<b>NOTE:</b> The syntax <code>void drawSign(Scene3D& scene ...)</code> may seem a bit strange at this point in the course.  We will talk about this more later, but <code>scene</code> is an object of type <code>Scene3D</code>, and the <code>Scene3D&</code> prefix is indicating that we want to pass <code>scene</code> <b>by reference</b>.  This means that we're not creating a copy of the scene when we call the method, but we're actually referring to the same scene across methods.  Then, we can call a method within the object with <code>scene.method()</code>.  Don't worry if this doesn't totally make sense yet...just follow <code>drawSign</code> as an example when you're doing other methods, and you'll be fine.
-									</p>
-									<p></p>
-									<h3><a name = "running">Running The Engine And Viewing The Scene</a></h3>
-
-									<p>
-										To run the 3D engine provided with this assignment and interactively view your scene, you need to save it to an HTML file.  For example, the following is in <code>simplescene.cpp</code> after all of the drawing commands
-									</p>
-
-									<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-										scene.saveScene("simplescene.html", "Simple Sample Scene");
-									]]></script>
-
-									<p>
-										To generate this, you have to build your file and run it.  First, open the folder containing your project in VSCode (it's important that you open the folder specifically for the <a href = "../../Software/index.html#liveserver">live server</a>). Then, compile your c++ program and run it.  In the image below, I'm showing doing this with a <a href = "#makefile">makefile</a>.  Once you run it, it will generate a file with whatever name you chose in <code>saveScene</code>.  Right click on this file in VSCode and click "Open with <a href = "../../Software/index.html#liveserver">Live Server</a>".  This will pop up with a window in your browser where you can interactively view the scene.  If you keep this window open and regenerate the scene, it will automatically refresh!
-									</p>
-
-									
-
-									<img src = "OpenScene.gif" width="80%">
-									
-
-
-									<p></p>
-
-									<h3><a name = "makefile">Setup / Makefile (3 Points)</a></h3>
-									<p>
-										First, to get started, you should setup a file called <code>myscene.cpp</code> that you will compile to generate your scene.  <b>You should keep the main method very small, as per the style guide</b>.  As an example, you can refer to the file <code><a href = "../simplescene.cpp">simplescene.cpp</a></code>, which sets up the small example scene above with two signs and Homer Simpson.  Finally, to make your job quicker as you go along, you should add an appropriate entry to your makefile.
-									</p>
-
-									<h3><a name = "tree">Tree (5 Points)</a></h3>
-									<p>
-										Create a method that draws a simple "lollipop" tree, which consists of a brown (<font color="brown">rgb 102, 51, 0</font>) trunk of a specified height, and a green (<font color = "green">rgb 0, 255, 0</font>) ellipsoid for the "leaves."  The height should be a parameter to the method so you can draw trees of varying heights.
-									</p>
-
-									<p>
-										Below is an example of an 8 meter tall tree next to a 6 meter tall tree (so calling the method twice).
-									</p>
-
-									<img src = "Tree.png">
-
-									<h3><a name = "firehydrant">Fire hydrant (5 Points)</a></h3>
-
-									<p>
-										Create a method that draws a red <font color = "red">(rgb 255, 0, 0)</font> fire hydrant that is roughly 1 meter tall.  The fire hydrant should consist of a small cylinder at its base with a larger, thinner cylinder on top.  It should also consist of a sphere on the top of the taller cylinder, and two boxes coming out right below the sphere.
-									</p>
-									<img src = "FireHydrant.png">
-
-
-									<h3><a name = "stoplight">Stop light (5 Points)</a></h3>
-
-									<p>
-										Create a method that draws a stop light.  The main pole on the left should be 8 meters tall, and the horizontal pole at the top should be 8 meters wide.  Attach a box to the horizontal poll that will hold the lights.  The top light should be a red (<font color = "red">rgb 255, 0, 0</font>) sphere, the middle light should be a yellow (<font color = "#cccccc00">rgb 255, 255, 0</font>) sphere, and the bottom one should be a green (<font color = "green">rgb 0, 255, 0</font>) sphere.
-									</p>
-									<p>
-										Below is an example stoplight with a fire hydrant next to it for scale.
-									</p>
-
-									<img src = "StopLight.png">
-
-									<h3><a name = "sedan">Sedan (5 Points)</a></h3>
-
-									<p>
-										Create a method that draws a (very boxy) car, either facing east/west or north/south, with a particular color.  It should have one box of that color that is 4.5 meters long, 1.7 meters wide, and 0.7 meters tall.  On top of that, it should have a slightly offset box that is 3.5 meters long, 1.4 meters wide, and 0.8 meters tall.  On the bottom box, there should be two grey cylinders of radius 0.5 and height 2 to represent the wheels.  For the east/west car, you will have to rotate the cylinder around the x-axis by 90 degrees, and for the north/south car, you will have to rotate the cylinder around both the x-axis and the y-axis by 90 degrees.
-									</p>
-
-									<p>
-										Below is an example of a red east/west car and a yellow north/south car, with a fire hydrant and stop light for scale (that red car should probably get out of the way!)
-									</p>
-
-									<img src = "Sedan.png">
-
-									<h3><a name = "block">City Block (5 Points)</a></h3>
-									<p>
-										Create a method that creates a city block by calling the other methods.  It should have the following:
-										<ul>
-											<li>At least two cars</li>
-											<li>At least two trees of different heights</li>
-											<li>At least one fire hydrant, stop light, and sign</li>
-											<li>At least one building (which can simply be a large box)</li>
-										</ul>
-										Here's an example
-									</p>
-									<img src = "CityBlock.png">
-									<p>
-										Finally, setup the method so that it takes an offset, and use it to draw at least two copies of this city block to create an entire city.
-									</p>
-									<img src = "CityBlockRepeated.png">
-
-									<h3><a name = "style">Style (3 Points)</a></h3>
-
-									<p>
-										You will be graded on adherence to the style guide.  Pay particular attention to your method documentation.
-									</p>
-
-									<h3><a name = "artcontest">Mandatory Art Contest (3 Points)</a></h3>
-									<p>
-										Create a c++ file <code>artcontest.cpp</code> and a corresponding makefile entry to create an executable called <code>artcontest</code>, which outputs a file <code>artcontest.html</code> with any virtual world you want.  Unleash your creativity!  Your scene does not have to be a city.  Indicate in your submission a title for your scene and what name or pseudonym you would like to use for the contest.  <i>The winner will receive 5 points of extra credit.</i>
-									</p>
-
-									<p>
-										In addition to the scene, you may also want to submit a movie of it.  The GIF below shows how to select two different cameras and automatically fly between them
-									</p>
-									<p>
-										<b>NOTE: </b> It may take a long time to generate this GIF, and you may have to refresh the page when you're finished downloading it.
-									</p>
-
-									<img src = "SelectingCameras.gif">
-
-									<p>
-										The result is as follows
-									</p>
-
-									<img src = "AnimationResult.gif">
-									
-
-                                    
-                                </div>
-						</div>
-					</div>
-					<!--Syntax highlighting in Javascript!-->
-					<script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
-					<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushJScript.js"></script>
-                    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js"></script>
-					<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushXml.js"></script>
-					<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushMatlabSimple.js"></script>
-					<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushPython.js"></script>
-					<link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.css"/>
-					<script type="text/javascript">SyntaxHighlighter.all();</script>
-
-
-
-						</div>
-					</div>
-
-			</div>
-			
-            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<!-- End Sidebar !-->
-
-<!-- Scripts -->
+    <body>
+        <h2>Modular Virtual 3D Cities Assignment</h2>
+
+        <ul>
+            <li>
+                <h3><a href = "https://github.com/NiftyVirtualCities/HW1_VirtualCities/archive/refs/heads/main.zip">Starter Code</a> (C++ and Java Versions Together, Both with three.js)</h3>
+            </li>
+            <li>
+                <h3><a href = "handout.html">Handout with Assignment Description</a></h3>
+            </li>
+            <li>
+                <h3>Art Contests</h3>
+                <h3>
+                    <ul>
+                        <li><a href = "ArtContests/F2020/index.html">Fall 2020</a></li>
+                        <li><a href = "ArtContests/S2022/index.html">Spring 2022</a></li>
+                        <li><a href = "ArtContests/F2022/index.html">Fall 2022</a></li>
+                        <li><a href = "ArtContests/S2023/index.html">Spring 2023</a></li>
+                    </ul>
+                </h3>
+            </li>
+        </ul>
+
+        <h2>Description</h2>
+        <p>
+            The purpose of this intro to CS assignment was to give students practice with modularity and method design in a fun application: designing virtual 3D city environments from scratch.  Students were provided with various overloaded methods for drawing primitive 3D shapes in different colors and proportions.  The shapes included as cylinder, ellipsoids, and rectangular prisms.  Students had put these shapes together in methods that drew different city objects, including:
+            <Ul>
+                <li>
+                    A "lollipop tree" (brown cylinder with a green ellipsoid on top)
+                </li>
+                <li>
+                    A fire hydrant (two rectangular prisms, two cylinders of different proportions, and a sphere)
+                </li>
+                <li>
+                    A stop light (a cylinder, two rectangular prisms, and three spheres)
+                </li>
+                <li>
+                    A sedan in two different orientations based on a boolean flag passed to the method (two rectangular prisms and two cylinders, with slightly tricky rotations for the cylinders)
+                </li>
+            </Ul>
+        </p>
+        <p>
+            In the process of making these methods, students got practice reading <a href = "Handout/docs/functions.html">method documentation of the primitive shapes</a>, as well as writing their own method documentation for the method parameters specifying positions and orientations of each city object.  
+        </p>
+        <p>
+            Once the individual city objects were completed, students went one level of abstraction higher and created a method to make a city block consisting of all of the objects together.  Finally, they then made a method to call the city block in a loop to create an entire city consisting of multiple city blocks.  
+        </p>
+
+        <p>
+            Students were graded on the accuracy of the city shapes, as well as style and quality of their method documentation.  Students were expected to properly modularize methods in a hierarchy with individual methods for each city object, a method for a city block, and a separate method for the entire city.  If students set their code up correctly, they would only have to pass an x and z offset parameter to the city block method to move all of the objects in the block together.  In this way, the assignment served as a gentle introduction to "scene graphs" and relative coordinate systems in computer graphics, couched in the framework of method design, modularity, and reusability (an ulterior motive was to get intro students excited enough to continue on in the curriculum to reach our capstone computer graphics course).
+        </p>
+
+        <h4>Art Contests</h4>
+        <p>
+            Once the students satisfied the primary objective of making a basic city, they were required to make a creative submission to submit to the class "art contest."  The art contest is actually the primary reason I am submitting this assignment to SIGCSE, as I was <b>absolutely blown away by what the students did</b>.  I've run this assignment 4 semesters now, and ever time students went miles beyond what I would have expected.  Therefore, I think I accidentally stumbled into a well of student creativity, and I want to share this with other instructors to help students get excited about CS at the intro level.
+        </p>
+        <p>
+            Here are a few of the many highlights, which span many hilarious and obviously painstaking efforts on the part of my students, who made me very proud:
+            <ul>
+                <li>Complex and precise rotations (e.g. "The Almighty" <a href = "ArtContests/F2020/index.html">Fall 2020</a>, "Tree" <a href = "ArtContests/F2022/index.html">Fall 2022</a>, "Cow Playing Piano" <a href = "ArtContests/S2023/index.html">Spring 2023</a>)</li>
+                <li>Procedurally generated scenes using some random utilities that we had previously introduced in class (e.g. "World" <a href = "ArtContests/F2020/index.html">Fall 2020</a>, "prodecural terrain" and "helix" <a href = "ArtContests/S2022/index.html">Spring 2022</a>)</li>
+                <li>
+                    Complex hierarchical scenes (e.g. "The Almighty" and "Cubes inside Cubes" <a href = "ArtContests/F2020/index.html">Fall 2020</a>, "alligator cow castle" <a href = "ArtContests/S2022/index.html">Spring 2022</a>, "cow abduction acid trip" and "a walk through town" <a href = "ArtContests/F2022/index.html">Fall 2022</a>, "fever dream," "the beginning of the end," "fireside," "animal grazing," "bowling alley," "starry night"<a href = "ArtContests/S2023/index.html">Spring 2023</a>)
+                </li>
+            </ul>
+        </p>
+
+        <h4>Assignment Backend Details</h4>
+        <p>
+            One of the biggest challenges designing this assignment was to get a cross-platform 3D system to work with minimal hassle.  During the first iteration of the assignment, I ran it in Netbeans + Java, and the primitive methods wrote the student's scene to a JSON file that could be loaded in my home grown graphics engine called "ggslac" (Geometry and Graphics Library for Small Liberal Arts Colleges) that I'd been using to teach a capstone course on computer graphics in our department.  However, I quickly discovered that students liked to go all out on the art contests, and they quickly brought my dinky little education engine to a halt.  Therefore, I upgraded the code this year to instead wrap around <a href = "https://threejs.org/">three.js</a>, which has better support for textured meshes, as well as adaptive space partitioning for real time rendering of the large scenes my students were designing.  The code now outputs an HTML file which includes the appropriate three.js files and which can be loaded directly into a browser.
+        </p>
+
+        <HR>
+        <h2>Metadata</h2>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Summary</td>
+                <td>This assignment has students design 3D virtual cities from the "ground up" in a modular way by creating methods that assemble primitive shapes such as cylinders, ellipsoids, and rectangular prisms, into more complex city objects such as stop lights and fire hydrants, which they eventually assemble into an entire city block, and then into a city.  The students' code outputs an HTML file that uses <a href = "https://threejs.org/">three.js</a> to render their cities in the browser in a cross-platform way, making software configuration straightforward.</td>
+            </tr>
+            <tr>
+                <td>Audience</td>
+                <td>
+                    I have run this assignment 4 times as the first assignment in a second semester CS course to get students warmed back up on methods and conditional statements, as well as some optional practice with loops (though students can get around not using loops).  I believe it is also appropriate for the middle/end part of an intro to CS course.  The assignment has energized students from a wide variety of backgrounds, so I believe it's a great topic to engage students both inside and out of the major
+                </td>
+            </tr>
+            <tr>
+                <td>Difficulty</td>
+                <td>
+                    <p>
+                        This was on the easy to moderate end for most students.  Even if students struggled with some individual city objects (the sedan with the rotated cylinders was usually the most challenging), they were able to make incremental progress on other city objects in parallel, so they could keep moving without getting completely stuck.  Students would also often chip away at the art contest as they were going along.
+                    </p>
+                    <p>
+                        Sometimes I had to take a little bit of extra time to explain the 3D coordinate system in class, but I was pleasantly surprised to discover that most students got that on their own.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Strengths</td>
+                <td>
+                    <p>
+                        Students were able to make incremental progress on individual city objects, so they didn't get too stuck.  This also seems to have substantially tapped into student creativity with the art contests.  Every semester I'd include winners from the previous semester's art contest as a teaser to motivate students, which seems to have kept the energy and creative output going.
+                    </p>
+                    <p>
+                        The assignment also provides an opportunity to hone in on good coding style and method documentation, as well as gently introducing students to external libraries and having them read others' method documentation to understand the point of it all.
+                    </p>
+                    <p>
+                        Finally, the assignment appears to have mass appeal.  Students from a wide variety of backgrounds were able to pursue their creative interests and have a lot of fun with the art contest.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Weaknesses</td>
+                <td>
+                    <p>
+                        Students sometimes complained about having to do some trial and error to get the city objects to look the way they wanted them to.  Students also have to understand a clear separation between the code they're running and the code that's being provided; compared to other assignments in the course, students write less code from scratch themselves, but they at least still have to define their new methods for the city objects from scratch.
+                    </p>
+                    <p>
+                        Beyond that, in the C++ version of the assignment, I was trying to teach makefiles concurrently with a method review as students were transitioning from Java in their intro course to C++ in this course.  However, I often found that students were confused on the makefiles at that stage of the course, and sometimes simply edited the <code>simplescene.cpp</code> example file I gave them to avoid making a new C++ file and adding an entry for it to the makefile.  So makefile practice has overall been less successful in this assignment than method practice.
+                    </p>
+                    <p>
+                        Finally, the primitive methods were encapsulated in a Scene3D class, and I hadn't gotten to classes yet, so I always had to wave my hands a little bit about passing that along by reference.  But this never seemed to cause too much trouble, and students were able to focus on methods.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Dependencies / Variants</td>
+                <td>
+                    I've provided two different versions of the assignment.  
+
+                    <p>
+                        The first is in Java/Netbeans and uses my original ggslac graphics engine, which works, but which is a bit slow for larger scenes.  <a href = "VirtualCities_Java.zip">Click here</a> to download this version.
+                    </p>
+
+                    <p>
+                        The second is a C++ version that outputs HTML files which use <a href = "https://threejs.org/">three.js</a>.  <a href = "VirtualCities_CPP.zip">Click here</a> to download this version.  This version requires standard GNU tools such as C++ and make, but there are no other dependencies.  To make things easier for students, I had them use Visual Studio Code as an IDE, and I had them install a plugin for a local web server that automatically refreshed every time their programs overwrote their HTML files.  This improved earlier versions of the assignment where students had to manually import JSON files into the scene viewer web page every time their code regenerated them.  <a href = "Handout/Software/index.html">Click here</a> for more details on the VSCode and live server setup.
+                    </p>
+
+                    <p>
+                        In both cases, <b>the web pages should be run in a local web server</b> to display properly and to avoid cross-origin requests when loading meshes.  It is sufficient to run a local web server in this directory with, for instance <code>python -m http.server</code>, and then all art contests submissions should load interactively.  Alternatively, one can use the live server plugin in Visual Studio Code.
+                    </p>
+                    <p>
+                        <b>NOTE Also:</b> It would be a fairly trivial extension to make wrappers in other languages like python that draw these primitive shapes, but we have an interest in teaching students C++ in the particular class that this assignment runs in.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Teaching Notes</td>
+                <td>
+                    <p>
+                        In the C++ version, it's helpful to have a mini assignment where students configure their software environment before starting this assignment, since compiling code in C++ can be tricky for beginngers.  I used to have detailed instructions on how to get WSL setup on Windows, and to get the proper libraries setup on Mac and Linux.  But recently, I've switched to using an Ubuntu server at our college with a uniform software setup that students can ssh into using Visual Studio Code, and I've found this works quite nicely and requires less tech support.
+                    </p>
+
+                    <p>
+                        Beyond that, it's also helpful for students to have had a week's experience with navigating folders/files in the terminal before starting this assignment, since they have to manage a few files
+                    </p>
+                </td>
+            </tr>
+        </table>
+        
+        <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 <!-- End Scripts -->
-	</body>
+    </body>
+</html>
